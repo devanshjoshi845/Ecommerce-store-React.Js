@@ -26,6 +26,7 @@ function Cart({ cart, setcart }) {
     });
     setcart(newCart);
   }
+
   function click(id){
     setcart(cart.filter((e)=>e.id !=id))
   }
@@ -40,7 +41,7 @@ function Cart({ cart, setcart }) {
       </span>
 
       <div className="product-wraper" id="c">
-        {cart.map((products) => {
+        {cart.map((products) => { 
           return (
             <div className="card remove-card">
               <img src={products.image} alt="" />
@@ -67,3 +68,20 @@ remove to cart
 </button>*/
 // ()=>setcart(cart.filter((e)=>e.id!=products.id))
 //()=>setcart(cart.filter((e)=>e.id!=products.id))
+//
+//
+///
+/// devansh  joshi 
+// akansh joshi 
+// devanhs joshi
+// 
+// devansh josshi
+// 
+// devansh joshi 
+// devnah joshi
+/// devansh joshi
+/// 
+//
+//
+ //
+  

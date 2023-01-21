@@ -6,14 +6,16 @@ function Product({ cart, setcart, search }) {
   useEffect(() => {
     let fetchpd;
 
-    {
-      search.length > 5
+    {  
+      search.length > 1
         ? (fetchpd = async () => {
             let res = await fetch(
-              `https://fakestoreapi.com/products/category/${search}`
+              `https://fakestoreapi.com/products`
             );
             let data = await res.json();
             //console.log(data);
+          data=data.filter((dt)=>(dt.category.includes(search)))
+            console.log(data)
             setproducts(data);
           })
         : (fetchpd = async () => {
@@ -23,8 +25,9 @@ function Product({ cart, setcart, search }) {
             setproducts(data);
           });
     }
+    
     fetchpd();
-  }, [search]);
+  },[search]);
 
   return (
 
@@ -114,4 +117,34 @@ export default Product;
         ))}
       </div>
     </div>
+*/
+
+
+/* useEffect(() => {
+    let fetchpd;
+
+    {  
+      search.length > 5
+        ? (fetchpd = async () => {
+            let res = await fetch(
+              `https://fakestoreapi.com/products/category/${search}`
+            );
+            let data = await res.json();
+            //console.log(data);
+            setproducts(data);
+          })
+        : (fetchpd = async () => {
+            let res = await fetch("https://fakestoreapi.com/products");
+            let data = await res.json();
+            //console.log(data);
+            setproducts(data);
+          });
+    }
+    fetchpd();
+  }, [search]);*/
+/*
+let obj={
+  name:"devanhs",
+  
+}
 */

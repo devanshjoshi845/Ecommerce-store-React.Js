@@ -23,6 +23,9 @@ shopping_cart
 add_shopping_cart
 </span  >{length} </span>
     </div>
+    <div className='windowpage'>
+      <div className='box'></div>
+    </div>
     </div>
   )
 }

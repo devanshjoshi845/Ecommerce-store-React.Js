@@ -15,7 +15,6 @@ function App() {
   let [search, setsearch] = useState("");
   // console.log(price)
   //console.log(cart.length)
-
   //console.log(cart)
   return (
     <div className="App">
